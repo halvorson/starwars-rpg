@@ -1,0 +1,41 @@
+.letterGuess {
+	font-size: 36px;
+} 
+
+#messageBox {
+	padding: 10px;
+	font-size: 24px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ccc;
+	margin-bottom: 20px;
+	overflow: scroll;
+}
+
+#gameBox {
+	font-size: 24px;
+	}
+
+
+
+
+#scoreboard {
+	padding-top: 40px;
+	font-size: 24px;
+	}
+
+.scores {
+	color: green;
+}
+
+#hangmanBox>img {
+	width: 100%;
+}
+
+#hangmanBox {
+	padding-top: 40px;
+}
+
+.hp {
+	font-size: 12px;
+}
