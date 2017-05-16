@@ -4,7 +4,7 @@
 
 #messageBox {
 	padding: 10px;
-	font-size: 24px;
+	font-size: 12px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #ccc;
@@ -15,9 +15,6 @@
 #gameBox {
 	font-size: 24px;
 	}
-
-
-
 
 #scoreboard {
 	padding-top: 40px;

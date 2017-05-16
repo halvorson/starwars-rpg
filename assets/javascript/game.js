@@ -21,19 +21,23 @@ var gameOn;
 
 function attack(charA, charB) {
 	sendMessage(charA.name + " attacks " + charB.name);
-	charB.hp -= charA.attack;
-	if (charB.hp < 0) {
-		charB.hp = 0;
-	}
+	// var img = $('<img />',
+ //             { id: 'ball',
+ //               src: 'assets/images/ball.png', 
+ //               width: 30,
+ //             })
+ //              .appendTo($('#gameBox'));
+ //    var charAPosition = $('#'+charA.ref).children('.row').children('img').position();
+ //    console.log(charAPosition);
+ //              $('#ball').css({top: charAPosition.top, left: charAPosition.left, position:'absolute'});
+ //              $('#ball').animate({ top: "+=200px"}, "normal");
+	charB.hp = Math.max(charB.hp-charA.attack,0);
 	setTimeout(sendMessage(charA.name + " hits " + charB.name + " for " + charA.attack + " damage. " + charB.name + " has " + charB.hp + " hp remaining."),2500);
 	charA.attack += charA.baseAttack;
 	sendMessage(charA.name + "'s attack raised to " + charA.attack);
 	if(charB.hp > 0) {
-		charA.hp -= charB.counterAttack;
+		charA.hp = Math.max(charA.hp-charB.counterAttack,0);
 		if (charA.hp<=0) {
-			if (charA.hp<0) {
-				charA.hp=0;
-			}
 			sendMessage(charB.name + " counterattacks for " + charB.counterAttack + " damage. " + charA.name + " has no hp remaining.");
 			sendMessage("You lose. Game Over!");
 			gameOn = false;
