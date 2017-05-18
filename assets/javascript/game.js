@@ -66,7 +66,7 @@ function setUpBoard() {
 	$(".char").on("click", function() {
         // This should only function on the first click
         var selectedCharStr = this.id;
-        console.log(this.id);
+        //console.log(this.id);
         $('#messageBox').empty();
         sendMessage("You've selected " + $(this).data('attachedChar').name);
         selectCharacter($(this).data('attachedChar'));
